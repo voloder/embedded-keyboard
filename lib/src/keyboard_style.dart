@@ -24,6 +24,7 @@ class KeyboardStyle {
     this.keyTextStyle = const TextStyle(
       color: Color(0xFF000000),
       fontSize: 20,
+      decoration: TextDecoration.none
     ),
   });
 
