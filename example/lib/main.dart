@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:embedded_keyboard/embedded_keyboard.dart';
@@ -34,9 +36,11 @@ class _HomePageState extends State<HomePage> {
   FocusNode _focusNode = FocusNode();
 
   TextEditingController _controller = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
-    Map<String, SpecialKey> specialKeys = Map.from(defaultSpecialKeys);
+    Map<String, SpecialKey> specialKeys =
+        Map.from(SpecialKeySets.numpadSpecialKeySet);
     switch (_mode) {
       case KeyboardMode.normal:
         break;
@@ -75,13 +79,17 @@ class _HomePageState extends State<HomePage> {
               focusNode: _focusNode,
               mode: _mode,
               textController: _controller,
-              layout: KeyboardLayouts.defaultLayout,
+              layout: KeyboardLayouts.numpadKeyboardLayout,
               specialKeys: specialKeys,
               onKeyPressed: (key) {
                 setState(() {
                   _mode = KeyboardMode.normal;
                 });
               },
+              style: KeyboardStyle(
+                keyPadding: EdgeInsets.all(2),
+              ),
+              retract: true,
               onSpecialKeyPressed: (key) {
                 switch (key.name) {
                   case "shift":

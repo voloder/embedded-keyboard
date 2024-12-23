@@ -1,4 +1,4 @@
-import 'package:embedded_keyboard/src/special.dart';
+import 'package:embedded_keyboard/src/special_key.dart';
 
 class KeyboardLayout {
   String name;

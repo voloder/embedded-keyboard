@@ -6,8 +6,8 @@ class KeyboardStyle {
   final TextStyle keyTextStyle;
   final BoxShadow shadow;
   final BoxBorder keyBorder;
-  final double borderRadius;
-  final double keyPadding;
+  final BorderRadius borderRadius;
+  final EdgeInsets keyPadding;
 
   KeyboardStyle({
     this.backgroundColor = const Color(0xFFF8F8F8),
@@ -19,8 +19,8 @@ class KeyboardStyle {
       offset: Offset(0, 2),
     ),
     this.keyBorder = const Border.fromBorderSide(BorderSide.none),
-    this.borderRadius = 8,
-    this.keyPadding = 8,
+    this.borderRadius = const BorderRadius.all(Radius.circular(4)),
+    this.keyPadding = const EdgeInsets.all(8),
     this.keyTextStyle = const TextStyle(
       color: Color(0xFF000000),
       fontSize: 20,

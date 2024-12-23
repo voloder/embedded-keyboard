@@ -22,4 +22,30 @@ class KeyboardLayouts {
     ["symbol", ".", ",", "?", "!", "'", "\"", ":", ";", "backspace"],
     ["shift", "space", "enter"],
   ]);
+
+  static final numpadKeyboardLayout = KeyboardLayout(name: "numpad", defaultLayout: [
+    ["1", "2", "3"],
+    ["4", "5", "6"],
+    ["7", "8", "9"],
+    ["symbol", "0", "backspace"],
+    ["shift", "space", "enter"]
+  ], shiftedLayout: [
+    ["!", "@", "#"],
+    ["\$", "%", "^"],
+    ["&", "*", "("],
+    ["symbol", ")", "backspace"],
+    ["shift", "space", "enter"]
+  ], symbolLayout: [
+    ["1", "2", "3"],
+    ["4", "5", "6"],
+    ["7", "8", "9"],
+    ["symbol", "0", "backspace"],
+    ["shift", "space", "enter"]
+  ], shiftedSymbolLayout: [
+    ["!", "@", "#"],
+    ["\$", "%", "^"],
+    ["&", "*", "("],
+    ["symbol", ")", "backspace"],
+    ["shift", "space", "enter"]
+  ]);
 }
